@@ -1,0 +1,207 @@
+node r1
+{
+	states = ("state0" "state1" );
+	position = (69 -297);
+	diagnosistype = "AUXILIARY";
+	DSLxSUBMODEL = "Root Submodel";
+	ismapvariable = "false";
+	ID = "variable1";
+	label = "r1";
+	excludepolicy = "include whole CPT";
+}
+node C
+{
+	states = ("state0" "state1" );
+	position = (814 -679);
+	diagnosistype = "AUXILIARY";
+	DSLxSUBMODEL = "Root Submodel";
+	ismapvariable = "false";
+	ID = "variable10";
+	label = "C";
+	excludepolicy = "include whole CPT";
+}
+node r2
+{
+	states = ("state0" "state1" );
+	position = (895 -328);
+	diagnosistype = "AUXILIARY";
+	DSLxSUBMODEL = "Root Submodel";
+	ismapvariable = "false";
+	ID = "variable5";
+	label = "r2";
+	excludepolicy = "include whole CPT";
+}
+node w2
+{
+	states = ("state0" "state1" );
+	position = (1365 -345);
+	diagnosistype = "AUXILIARY";
+	DSLxSUBMODEL = "Root Submodel";
+	ismapvariable = "false";
+	ID = "variable7";
+	label = "w2";
+	excludepolicy = "include whole CPT";
+}
+node X1
+{
+	states = ("state0" "state1" );
+	position = (328 -329);
+	diagnosistype = "AUXILIARY";
+	DSLxSUBMODEL = "Root Submodel";
+	ismapvariable = "false";
+	ID = "variable2";
+	label = "X1";
+	excludepolicy = "include whole CPT";
+}
+node H2
+{
+	states = ("state0" "state1" );
+	position = (1036 -154);
+	diagnosistype = "AUXILIARY";
+	DSLxSUBMODEL = "Root Submodel";
+	ismapvariable = "false";
+	ID = "variable4";
+	label = "H2";
+	excludepolicy = "include whole CPT";
+}
+node U1
+{
+	states = ("state0" "state1" );
+	position = (242 -463);
+	diagnosistype = "AUXILIARY";
+	DSLxSUBMODEL = "Root Submodel";
+	ismapvariable = "false";
+	ID = "variable8";
+	label = "U1";
+	excludepolicy = "include whole CPT";
+}
+node U2
+{
+	states = ("state0" "state1" );
+	position = (1024 -501);
+	diagnosistype = "AUXILIARY";
+	DSLxSUBMODEL = "Root Submodel";
+	ismapvariable = "false";
+	ID = "variable9";
+	label = "U2";
+	excludepolicy = "include whole CPT";
+}
+node H1
+{
+	states = ("state0" "state1" );
+	position = (251 -137);
+	diagnosistype = "AUXILIARY";
+	DSLxSUBMODEL = "Root Submodel";
+	ismapvariable = "false";
+	ID = "variable0";
+	label = "H1";
+	excludepolicy = "include whole CPT";
+}
+node X2
+{
+	states = ("state0" "state1" );
+	position = (1118 -350);
+	diagnosistype = "AUXILIARY";
+	DSLxSUBMODEL = "Root Submodel";
+	ismapvariable = "false";
+	ID = "variable6";
+	label = "X2";
+	excludepolicy = "include whole CPT";
+}
+node Up
+{
+	states = ("state0" "state1" );
+	position = (815 -792);
+	diagnosistype = "AUXILIARY";
+	DSLxSUBMODEL = "Root Submodel";
+	ismapvariable = "false";
+	ID = "variable11";
+	label = "Up";
+	excludepolicy = "include whole CPT";
+}
+node w1
+{
+	states = ("state0" "state1" );
+	position = (588 -320);
+	diagnosistype = "AUXILIARY";
+	DSLxSUBMODEL = "Root Submodel";
+	ismapvariable = "false";
+	ID = "variable3";
+	label = "w1";
+	excludepolicy = "include whole CPT";
+}
+potential ( r1 | H1 )
+{
+	data = ((	0.5	0.5	)
+		(	0.5	0.5	));
+}
+potential ( C | X1 w1 X2 w2 )
+{
+	data = (((((	0.5	0.5	)
+		(	0.5	0.5	))
+		((	0.5	0.5	)
+		(	0.5	0.5	)))
+		(((	0.5	0.5	)
+		(	0.5	0.5	))
+		((	0.5	0.5	)
+		(	0.5	0.5	))))
+		((((	0.5	0.5	)
+		(	0.5	0.5	))
+		((	0.5	0.5	)
+		(	0.5	0.5	)))
+		(((	0.5	0.5	)
+		(	0.5	0.5	))
+		((	0.5	0.5	)
+		(	0.5	0.5	)))));
+}
+potential ( r2 | H2 )
+{
+	data = ((	0.5	0.5	)
+		(	0.5	0.5	));
+}
+potential ( w2 | H2 )
+{
+	data = ((	0.5	0.5	)
+		(	0.5	0.5	));
+}
+potential ( X1 | )
+{
+	data = (	0.5	0.5	);
+}
+potential ( H2 | H1 )
+{
+	data = ((	0.5	0.5	)
+		(	0.5	0.5	));
+}
+potential ( U1 | r1 X1 )
+{
+	data = (((	0.5	0.5	)
+		(	0.5	0.5	))
+		((	0.5	0.5	)
+		(	0.5	0.5	)));
+}
+potential ( U2 | r2 X2 )
+{
+	data = (((	0.5	0.5	)
+		(	0.5	0.5	))
+		((	0.5	0.5	)
+		(	0.5	0.5	)));
+}
+potential ( H1 | )
+{
+	data = (	0.5	0.5	);
+}
+potential ( X2 | )
+{
+	data = (	0.5	0.5	);
+}
+potential ( Up | C )
+{
+	data = ((	0.5	0.5	)
+		(	0.5	0.5	));
+}
+potential ( w1 | H1 )
+{
+	data = ((	0.5	0.5	)
+		(	0.5	0.5	));
+}
