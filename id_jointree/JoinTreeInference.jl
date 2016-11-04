@@ -48,8 +48,9 @@ function parse_node(nodematch::RegexMatch)
 end
 
 function parse_data_statement(value)
+    value = replace(value, r"\s+", " ")
     value = replace(value, r"[\n\r]", "")
-    value = replace(value, r"\)\s+\(", ")(")
+    value = replace(value, r"\) \(", ")(")
     value = replace(value, r"[)(]", " ")
     data = Array(Float64, 0)
     output = ""
